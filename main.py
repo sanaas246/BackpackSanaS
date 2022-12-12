@@ -2,7 +2,7 @@ class Backpack:
     def __init__(self, color, size, items, open):
         self.color = color
         self.size = size 
-        self.items = []
+        self.items = [ ]
         self.open = False
 
     def openBag(self):
@@ -28,3 +28,6 @@ class Backpack:
                 print(f"These items are in your bag: {self.items}")
         else:
             print("Backpack not open")
+
+bag1 = Backpack("blue", "small", "banana", False)
+print(bag1.items)
