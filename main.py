@@ -15,19 +15,30 @@ class Backpack:
 
     def putin(self,item):
         if self.open == True:
-            if item in self.items:
-                self.items.append(item)
-                print(f"These items are in your bag: {self.items}")
+            self.items.append(item)
+            print(f"These items are in your bag: {self.items}")
         else:
             print("Backpack not open")
 
     def takeout(self,item):
         if self.open == True:
             if item in self.items:
-                self.items.pop(item)
+                self.items.pop(self.items.index(item))
                 print(f"These items are in your bag: {self.items}")
+            else:
+                print("Item not in bag")
         else:
             print("Backpack not open")
 
 bag1 = Backpack("blue", "small", [], False)
-print(bag1.open)
+bag2 = Backpack("red","medium", [], False)
+bag2 = Backpack("green","large", [], False)
+
+
+bag1.openBag()
+bag1.putin("lunch")
+bag1.putin("jacket")
+bag1.closeBag()
+bag1.openBag()
+bag1.takeout("jacket")
+bag1.closeBag()
