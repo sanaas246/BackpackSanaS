@@ -29,5 +29,5 @@ class Backpack:
         else:
             print("Backpack not open")
 
-bag1 = Backpack("blue", "small", "banana", False)
-print(bag1.items)
+bag1 = Backpack("blue", "small", [], False)
+print(bag1.open)
